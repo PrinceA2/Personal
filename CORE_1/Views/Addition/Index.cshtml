@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<p>This webpage is created with the help of Controller and View only</p>
+
+@using(Html.BeginForm())
+{
+    @Html.TextBox("txt1")<br />
+    @Html.TextBox("txt2")<br />
+
+    <input type="submit" name="btnsubmit" value="ADD" />
+}
+<p>@ViewBag.data</p>
+ 
+
+
+@* 
+ In the provided code, there isn't an explicit onclick event handler attached to the "ADD" button. However, in HTML forms, if a submit button (<input type="submit"> or <button type="submit">) is clicked within a form element (<form>), it automatically triggers the submission of the form via an HTTP POST request to the URL specified in the action attribute of the form.
+
+In this case, since the form is submitted via a submit button (<input type="submit" name="btnsubmit" value="ADD" />) placed inside the form (@using(Html.BeginForm())), clicking the "ADD" button will indeed trigger a form submission with an HTTP POST request, which will be handled by the corresponding [HttpPost] action method in the controller (Index method in the Addition controller).
+ *@
+
+
+
+
